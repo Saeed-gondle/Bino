@@ -1,0 +1,80 @@
+.header {
+  padding: 3rem;
+  height: 85vh;
+  clip-path: polygon(50% 0%, 100% 0, 100% 87%, 50% 100%, 0 88%, 0 0);
+  background-image: linear-gradient(
+      to right,
+      rgba($color-black, 0.7),
+      rgba($color-black, 0.7)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  @include respond(big-desktop) {
+    height: 90vh;
+  }
+  @include respond(phone) {
+    clip-path: none;
+  }
+}
+.navigation {
+  &__logo {
+    height: 4rem;
+  }
+}
+.hero {
+  width: 90%;
+  @include respond(phone-425) {
+    width: 100%;
+  }
+  &__main {
+    width: 50%;
+    @include respond(phone-425) {
+      width: 90%;
+    }
+  }
+  @include absCenter();
+  @include flexRowCenter();
+  justify-content: space-between;
+  transform: translate(-50%, -40%);
+  & + * {
+    @include absDown();
+  }
+}
+.anchor {
+  clip-path: circle(50%);
+
+  height: 5rem;
+  width: 5rem;
+}
+.arrow {
+  cursor: pointer;
+  color: $color-grey-light-1;
+  font-size: 2.2rem;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+
+    left: 100%;
+    width: 0%;
+    height: 0%;
+    transition: all 0.4s ease;
+  }
+  &:hover {
+    &::after {
+      content: &;
+
+      left: -4px;
+      z-index: -1;
+      width: 200%;
+      height: 100%;
+      background-image: linear-gradient(
+        to right,
+        $color-primary-light,
+        $color-primary-dark
+      );
+    }
+  }
+}

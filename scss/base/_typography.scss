@@ -1,0 +1,124 @@
+.heading-primary {
+  @include respond(phone-425) {
+    font-size: 3.6rem;
+  }
+  color: $color-grey-light-2;
+  letter-spacing: 3px;
+  font-size: 5.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  &__sub {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    display: block;
+
+    font-weight: 400;
+    letter-spacing: 1px;
+    
+    @include respond(phone-425) {
+      font-size: 1.1rem;
+    }
+  }
+}
+.hero__text {
+  color: $color-grey-light-2;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  width: 98%;
+}
+
+.heading-tertiary {
+  color: $color-grey-dark;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  transition: all 0.8s ease;
+}
+.heading-secondary {
+  color: $color-grey-dark;
+  font-size: 2.4rem;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  &__sub {
+    display: block;
+    text-transform: capitalize;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+}
+.crumbs {
+  @extend .heading-secondary__sub;
+  margin: 3rem 0;
+  text-align: center;
+  @include respond(big-desktop) {
+    font-size: 1.5rem;
+  }
+  @include respond(phone-425) {
+    margin: 1.5rem 0;
+  }
+}
+.hidden-txt {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  position: absolute;
+  transition: all 0.6s ease;
+  bottom: 2rem;
+  left: 4rem;
+  color: $color-grey-light-2 !important;
+  p {
+    @include respond(big-desktop) {
+      font-size: 1.6rem;
+    }
+    color: $color-grey-light-2;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+}
+.stat-box__txt {
+  color: $color-grey-light-2;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  span {
+    margin-top: 1rem;
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+}
+.heading-penta {
+  font-size: 2.2rem;
+  @extend .stat-box__txt;
+  @include respond(phone-425) {
+    font-size: 2rem; 
+  }
+}
+.heading-penta + p {
+  color: $color-grey-light-2;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.contact__info {
+  h4 {
+    color: #d82f2f;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+  }
+  p {
+    color: $color-grey-dark-2;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-align: left;
+    margin: 2rem 0;
+  }
+}

@@ -1,0 +1,71 @@
+.section-feature {
+  padding: 20rem 0;
+  border-bottom: 1px solid $color-grey-dark;
+  .features {
+    @include flexRowCenter();
+    gap: 4rem;
+    width: 87%;
+    @include respond(tab-768) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    @include respond(phone) {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+  }
+}
+.section-history {
+  padding: 10rem 0;
+  @include flexRowCenter();
+}
+.section-history {
+  padding: 10rem 0;
+}
+.section-work {
+  padding: 10rem 0;
+}
+.section-case {
+  padding: 10rem 0;
+}
+.section-stats {
+  padding: 15rem 0;
+}
+.section-pricing {
+  padding: 10rem 0;
+}
+.section-team {
+  padding: 10rem 0;
+}
+.section-clients {
+  padding: 10rem 0;
+}
+.section-blog {
+  padding: 10rem 0;
+}
+.section-contact {
+  padding: 10rem 0;
+  @include respond(big-desktop) {
+    margin-top: 20rem;
+  }
+}
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  @include respond(big-desktop) {
+    margin: 12rem auto;
+  }
+  @include respond(desktop-1680) {
+    margin: 12rem auto;
+  }
+  @include respond(phone-425) {
+    margin: 4rem auto;
+  }
+}
+body {
+  @include respond(phone-bg) {
+    background-color: red;
+  }
+}

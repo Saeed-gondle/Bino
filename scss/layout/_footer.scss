@@ -1,0 +1,66 @@
+.footer {
+  @include respond(big-desktop) {
+    height: 43vh;
+  }
+  @include respond(laptop) {
+    height: 61vh;
+  }
+  height: 50vh;
+  position: relative;
+  background-image: linear-gradient(to right, #000000b3, #000000b3),
+    url(../img/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__txt {
+    width: 90%;
+    &__main {
+      width: 50%;
+    }
+    @include absCenter();
+    @include flexRowCenter();
+    justify-content: center;
+    transform: translate(-50%, -40%);
+  }
+  &__copy {
+    @include absDown();
+    top: 97%;
+    background-color: $color-grey-dark-4;
+    @include flexRowCenter();
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__logos {
+    flex: 0 1 50%;
+    @include flexRowCenter();
+    padding: 0 5rem;
+    justify-content: right;
+    gap: 3rem;
+    align-items: center;
+    @include respond(phone-425) {
+    gap: 2rem;
+    
+    }
+  }
+  &__logo--main {
+    height: 2.5rem;
+    width: 2.5rem;
+    @include respond(phone-425) {
+      height: 2rem;
+      width: 2rem;
+    }
+    cursor: pointer;
+    transition: all 0.6s ease;
+    &:hover {
+      fill: $color-primary-dark;
+    }
+  }
+  .copy-text {
+    flex: 1;
+    padding: 0 2rem;
+    color: $color-grey-dark-3;
+    font-size: 1.2rem;
+    @include respond(phone-425) {
+      font-size: 1rem;
+    }
+  }
+}

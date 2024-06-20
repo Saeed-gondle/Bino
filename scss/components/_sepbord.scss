@@ -1,0 +1,28 @@
+.grey-line {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 194%;
+    left: 27%;
+    height: 0.35rem;
+    width: 5rem;
+    border-radius: 1%;
+    background-color: $color-grey-dark-3;
+    transition: all 0.8s ease;
+  }
+}
+.red-line {
+  position: relative;
+  &::after {
+    content: "";
+    background-color: $color-primary-dark;
+    border-radius: 10%;
+    width: 0.4rem;
+    height: 3rem;
+    transition: all 0.8s;
+    position: absolute;
+    top: -14%;
+    left: -4%;
+  }
+}

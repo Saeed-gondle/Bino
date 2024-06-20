@@ -1,0 +1,108 @@
+.service {
+  @include respond(big-desktop) {
+    max-height: 60vh;
+    min-height: 58vh;
+  }
+  @include respond(desktop-1300) {
+    max-height: 65vh;
+  }
+  @include respond(phone) {
+    max-height: 100vh !important; 
+  }
+
+  background-color: $color-grey-dark-4;
+  background-image: url(../img/services.jpg);
+  max-height: 55vh;
+  background-size: 50% 102%;
+  background-position: right;
+  background-repeat: no-repeat;
+
+  @include respond(phone-425) {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.716),
+        rgba(0, 0, 0, 0.716)
+      ),
+      url(../img/services.jpg);
+    background-size: cover;
+    max-height: 55vh;
+  }
+  // @include respond(desktop-1680) {
+  //   height: 55vh;
+  // }
+  // @include respond(big-desktop) {
+  //   height: 56vh;
+  // }
+  // @include respond(big-desktop-1080) {
+  //   height: 58vh;
+  // }
+
+  // @include respond(laptop) {
+  //   height: 55vh;
+  // }
+  // @include respond(tab-768) {
+  //   height: 44vh;
+  // }
+
+  &__content {
+    max-width: 50%;
+    max-height: 100%;
+    padding: 6rem 2rem;
+    @include respond(phone-425) {
+      max-width: 100%;
+    }
+    @include flexColCenter();
+    justify-content: center;
+    align-items: flex-end;
+
+    @include respond(tab-768) {
+      padding: 3rem 2rem;
+    }
+    @include flexColCenter();
+    align-items: end;
+
+    @include respond(desktop-1680) {
+      padding: 12rem 3rem;
+    }
+    @include respond(desktop-1300) {
+      padding: 7rem 3rem;
+    }
+    @include respond(laptop) {
+      padding: 6rem 2rem;
+    }
+    @include respond(big-desktop-1080) {
+      padding: 8rem 3rem;
+    }
+  } 
+  &__heading {
+    color: $color-grey-light-1;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    &::after {
+      border-radius: 9%;
+      left: 97% !important;
+    }
+  }
+  &__para {
+    width: 80%;
+    @include respond(tab-768) {
+      width: 92%;
+    }
+    @include respond(tab-810) {
+      width: 92%;
+    }
+    text-align: right;
+    &:not(:last-child) {
+      margin: 2rem 0;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      color: $color-primary-dark;
+      font-size: 1.6rem;
+    }
+    p {
+      color: $color-grey-dark-3;
+      font-size: 1.2rem;
+      line-height: 2;
+    }
+  }
+}

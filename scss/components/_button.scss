@@ -1,0 +1,45 @@
+.hero__btns {
+  margin-top: 6rem;
+  @include flexRowCenter();
+  transform: translateX(-2rem);
+}
+.button {
+  color: $color-grey-light-2;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.75);
+
+  &:hover {
+    transform: translateY(-0.5rem);
+    cursor: pointer;
+  }
+  &:active {
+    transform: translateY(0.5rem);
+  }
+}
+.button--main {
+  background-color: $color-primary-light;
+  @include respond(phone-small) {
+    padding: 1rem 1rem;
+  font-size: 1rem;
+  }
+  &:hover {
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+  }
+}
+.button--sec {
+  background-color: transparent;
+  @include respond(phone-small) {
+    padding: 1rem 1rem;
+  font-size: 1rem;
+  }
+  &:hover {
+    background-color: $color-grey-dark;
+  }
+}

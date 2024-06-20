@@ -1,0 +1,424 @@
+.teams {
+  @include respond(big-desktop) {
+    height: 56vh;
+  }
+  @include respond(laptop) {
+    min-height: 35vh;
+  }
+  @include respond(tab-768) {
+    height: 48vh;
+  }
+  @include respond(tab-810) {
+    height: 48vh;
+  }
+  @include respond(phone) {
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+  @include respond(phone-425) {
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+  background: linear-gradient(to bottom, transparent 50%, #e74d3cb8 100%),
+    url(../img/background.jpg);
+
+  min-height: 48vh;
+  max-height: 60vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 3rem;
+  &-wave {
+    height: 67%;
+    width: 100%;
+  }
+  &-wave__main {
+    fill: #e74d3cb8;
+    opacity: 0.5;
+    transform: translateY(-5.5rem) scale(1.6);
+    height: 100%;
+  }
+  &__img {
+    width: 5rem;
+    height: 5rem;
+    @include respond(laptop) {
+      width: 4rem;
+      height: 4rem;
+    }
+    @include respond(big-desktop) {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+    transition: all 0.6s ease;
+    &::after {
+      width: 3rem;
+      background-color: $color-grey-light-1;
+      height: 0.35rem;
+      top: 100%;
+      left: 13%;
+      transform: rotate(90deg);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+    &:hover .teams__intro {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      transform: translate(-2rem, 2rem);
+    }
+    &--3:hover .teams__intro {
+      transform: translate(-3rem, -13rem);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    &--4:hover .teams__intro {
+      transform: translate(-3rem, -13rem);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    &:hover::after {
+      display: none;
+      top: 149%;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    img {
+      outline: 3px solid #e74c3c;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        background-image: linear-gradient(#e74d3c73, #e74d3c7e);
+      }
+    }
+    &--1 {
+      position: absolute;
+      top: 64%;
+      left: 16%;
+      @include respond(big-desktop) {
+        top: 61%;
+        left: 12%;
+      }
+      @include respond(desktop-1680) {
+        top: 62%;
+        left: 12%;
+      }
+      @include respond(desktop-1600) {
+        top: 62%;
+        left: 14%;
+      }
+    }
+    &--2 {
+      position: absolute;
+      top: 67%;
+      left: 35%;
+      @include respond(big-desktop) {
+        top: 62%;
+        left: 31%;
+      }
+      @include respond(big-desktop-1080) {
+        top: 65%;
+        left: 30%;
+      }
+      @include respond(desktop-1680) {
+        top: 64%;
+        left: 32%;
+      }
+      @include respond(desktop-1600) {
+        top: 67%;
+        left: 32%;
+      }
+      @include respond(tab-land) {
+        top: 69%;
+        left: 35%;
+      }
+      @include respond(desktop-1300) {
+        top: 69%;
+        left: 32%;
+        &:hover .teams__intro {
+          transform: translate(-3rem, -13rem);
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+      }
+      @include respond(tab-768) {
+        top: 64%;
+        left: 35%;
+      }
+    }
+    &--3 {
+      position: absolute;
+      top: 77%;
+      left: 50%;
+      @include respond(big-desktop) {
+        top: 74%;
+        left: 50%;
+      }
+      @include respond(big-desktop-1080) {
+        top: 74%;
+        left: 49%;
+      }
+      @include respond(desktop-1680) {
+        top: 74%;
+        left: 50%;
+      }
+      @include respond(laptop) {
+        top: 74%;
+        left: 50%;
+      }
+      @include respond(tab-land) {
+        top: 78%;
+        left: 50%;
+      }
+      @include respond(tab-768) {
+        top: 71%;
+        left: 52%;
+      }
+    }
+    &--4 {
+      position: sticky;
+      top: 75%;
+      left: 68%;
+      // top: 75%;
+      // left: 68%;
+      @include respond(big-desktop) {
+        top: 63%;
+        left: 71%;
+      }
+      @include respond(big-desktop-1080) {
+        top: 54%;
+        left: 71%;
+      }
+      @include respond(desktop-1680) {
+        top: 67%;
+        left: 68%;
+      }
+      @include respond(desktop-1600) {
+        top: 59%;
+        left: 68%;
+      }
+      @include respond(desktop-1400) {
+        top: 68%;
+        left: 68%;
+      }
+      @include respond(desktop-1300) {
+        top: 61%;
+        left: 68%;
+      }
+      @include respond(laptop) {
+        top: 78%;
+      }
+      @include respond(tab-land) {
+        top: 71%;
+      }
+      @include respond(tab-768) {
+        top: 75%;
+        left: 71%;
+      }
+    }
+    &--5 {
+      position: absolute;
+      top: 56%;
+      left: 86%;
+      @include respond(big-desktop) {
+        top: 36%;
+        left: 91%;
+      }
+      @include respond(big-desktop-1080) {
+        top: 27%;
+        left: 91%;
+      }
+      @include respond(desktop-1680) {
+        top: 43%;
+        left: 86%;
+      }
+      @include respond(desktop-1600) {
+        top: 32%;
+        left: 86%;
+      }
+      @include respond(desktop-1400) {
+        top: 45%;
+        left: 86%;
+      }
+      @include respond(desktop-1300) {
+        top: 35%;
+        left: 86%;
+      }
+      @include respond(laptop) {
+        top: 66%;
+        left: 86%;
+      }
+      @include respond(tab-land) {
+        top: 49%;
+        left: 86%;
+      }
+      @include respond(tab-768) {
+        top: 73%;
+        left: 89%;
+      }
+    }
+  }
+  &__intro {
+    padding: 0.5rem 1rem;
+    border: 2px solid orangered;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    span {
+      display: block;
+      font-size: 1rem;
+
+      color: #fff;
+    }
+    color: orangered;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    width: 10rem;
+    display: block;
+    transform: translate(-2rem, -10rem);
+    transition: all 0.6s ease;
+    text-align: center;
+  }
+}
+.row {
+  @include flexRowCenter();
+  width: 105%;
+  @include respond(phone-425) {
+    gap: 0;
+    @include flexColCenter();
+    justify-content: center;
+    align-items: center;
+  }
+  justify-content: space-around;
+  & > * {
+    max-height: 15rem;
+  }
+}
+.our-team {
+  padding-bottom: 20px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+.our-team .pic {
+  display: inline-block;
+  clip-path: circle();
+  width: 9rem;
+
+  height: 64%;
+  // background-color: #e74d3cb8;
+  padding: 70px 20px 30px;
+  margin-bottom: 20px;
+  position: relative;
+  @include respond(phone-425) {
+    width: 7rem;
+  }
+}
+
+.our-team .description {
+  font-size: 14px;
+  color: #fff;
+}
+.our-team .pic img {
+  width: 101%;
+  height: 101%;
+  object-fit: contain;
+  clip-path: circle();
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  transition: all 0.6s ease 0s;
+}
+.our-team:hover .pic img {
+  transform: rotate(-180deg);
+  transform-origin: 95% 40% 0;
+}
+.our-team .our-team__intro {
+  padding: 5px;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(-1rem);
+  transition: all 0.6s ease;
+  border: 2px solid wheat;
+  @include respond(phone-425) {
+    left: 172%;
+    top: 3rem;
+  }
+}
+.our-team:hover .our-team__intro {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+  transform: translateY(0);
+}
+.our-team .title {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $color-primary-dark;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.our-team .post {
+  display: block;
+  font-size: 1rem;
+  color: #f9f9f9;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  position: relative;
+}
+.our-team .post:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #eee;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+}
+.our-team .social {
+  padding: 0;
+  margin: 25px 0 0 0;
+  list-style: none;
+}
+.our-team .social li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.our-team .social li a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  line-height: 35px;
+  background: #7740ff;
+  font-size: 15px;
+  color: #fff;
+}
+.our-team .social li a:hover {
+  background: #ff595e;
+}
+// @media only screen and (max-width: 990px) {
+//   .our-team {
+//     margin-bottom: 30px;
+//   }
+// }
+// @media only screen and (max-width: 767px) {
+//   .our-team {
+//     overflow: hidden;
+//   }
+// }

@@ -1,0 +1,45 @@
+#blog-gallery{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#blog-gallery > h2{
+  font-size: 3.2rem;
+}
+#blog-gallery > p{
+  font-size: 1.2rem;
+}
+.blog-con {
+  margin-top: 4.4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.blog img {
+  width: 100%;
+}
+.blog-txt {
+  width: 100%;
+  padding: 2rem;
+  background-color: #e74e3e;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+.blog-txt h4 {
+  font-size: 1rem;
+}
+.blog-txt h3 {
+  font-size: 1.8rem;
+}
+.blog-txt p {
+  font-size: 1.2rem;
+  text-align: left;
+}
+.blog-txt a {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,168 @@
+.case {
+  position: relative;
+  @include flexRowCenter();
+  gap: 0;
+
+  &__content {
+    @include flexColCenter();
+    position: relative;
+    left: 7rem;
+    z-index: 100;
+    box-shadow: 2px 5px 11px #0000007e;
+    gap: 3rem;
+    width: 35%;
+    height: 41rem;
+
+    padding: 3rem;
+
+    background-color: $color-grey-light-1;
+
+    @include respond(desktop-1600) {
+      width: 29%;
+      height: 46rem;
+      padding: 7rem;
+    }
+
+    @include respond(laptop) {
+      gap: 2rem;
+      width: 36%;
+      height: 46rem;
+      padding: 7rem;
+    }
+
+    @include respond(phone-425) {
+      width: 70%;
+      height: 41rem;
+      padding: 3rem;
+      left: -4rem;
+    }
+
+    @include respond(big-desktop) {
+      gap: 2rem;
+      width: 28%;
+      height: 47rem;
+      padding: 7rem;
+    }
+    @include respond(desktop-1680) {
+      width: 28%;
+      height: 46rem;
+      padding: 7rem;
+    }
+    @include respond(desktop-1300) {
+      width: 33%;
+      height: 46rem;
+      padding: 7rem;
+    }
+    @include respond(tab-810) {
+      width: 42%;
+      height: 49rem;
+      padding: 7rem;
+      left: 4rem;
+    }
+    @include respond(tab-768) {
+      width: 44%;
+      height: 46rem;
+      padding: 6rem;
+      left: 4rem;
+    }
+    @include respond(phone) {
+      width: 60%;
+      left: -10rem;
+    }
+    @include respond(phone-550) {
+      width: 68%;
+      height: 42rem;
+      padding: 4rem;
+      left: 0;
+    }
+    @include respond(phone-425) {
+      width: 68%;
+      height: 40rem;
+      padding: 4rem;
+    }
+    @include respond(phone-375) {
+      width: 72%;
+      height: 43rem;
+      padding: 4rem;
+    }
+    @include respond(phone-320) {
+      width: 90%;
+      left: 0;
+    }
+  }
+  &__txt {
+    @include flexColCenter();
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+    .heading-tertiary + p {
+      @extend .heading-secondary__sub;
+      margin: 2rem 0;
+      text-align: center;
+      font-size: 1.15rem;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      line-height: 1.45;
+      @include respond(phone-425) {
+        font-size: 1rem;
+      }
+    }
+
+    & > h3::after {
+      top: 200%;
+      left: 40%;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    background-color: $color-primary-dark;
+    padding: 3rem;
+
+    transform: rotate(45deg);
+    & > * {
+      @include absCenter();
+      top: 30%;
+      left: 31%;
+      stroke: $color-grey-light-1 !important;
+      height: 2.5rem;
+      width: 2.5rem;
+
+      transform: rotate(-45deg);
+    }
+  }
+  &__image {
+    max-width: 34%;
+
+    @include respond(phone) {
+      max-width: 38%;
+    }
+    @include respond(phone) {
+      position: absolute;
+    }
+    & > * {
+      @include respond(laptop) {
+        max-width: 140%;
+      }
+      @include respond(big-desktop) {
+        max-width: 140%;
+        min-width: 114%;
+      }
+      @include respond(tab-768) {
+        max-width: 121%;
+        max-height: 100%;
+      }
+      @include respond(tab-810) {
+        max-width: 170%;
+        max-height: 100%;
+      }
+      @include respond(tab-768) {
+        max-width: 132%;
+      }
+      @include respond(phone-425) {
+        max-width: 182%;
+      }
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+}

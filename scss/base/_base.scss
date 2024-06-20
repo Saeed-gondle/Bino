@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+body {
+  box-sizing: border-box;
+  @include respond(tab-land) {
+    // width < 1200?
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+  }
+
+  @include respond(big-desktop) {
+  }
+ 
+}
+html,body{
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $color-grey-dark;
+}
+::selection {
+  background-color: $color-primary-light;
+  color: $color-white;
+}
+li {
+  list-style: none;
+ 
+}
+
+// @media (max-width: 37.5em) {
+//   body {
+//     background-color: red;
+//   }
+// } //600px
+
+// @media (max-width: 56.25em) {
+//   body {
+//     background-color: red;
+//   }
+// } //900px
+
+// @media (min-width: 64em) {
+//   body {
+//     background-color: red;
+//   }
+// } //1800
+
+// @media (max-width: 75em) {
+//   body {
+//     background-color: red;
+//   } //1200px
+// }
+
+// @media (max-width: 48em) {
+//   //1200px
+//   body {
+//     background-color: red;
+//   }
+// }
+
+// @media (min-width: 90em) {
+//   //1800
+//   body {
+//     background-color: red;
+//   }
+// }
+
+// @media (min-width: 85.3em) {
+//   //1800
+//   body {
+//     background-color: red;
+//   }
+// }
+
+// @media (min-width: 90em) {
+//   body {
+//     background-color: red;
+//   }
+//   //1800
+// }
+
+// @media (min-width: 100em) {
+//   body {
+//     background-color: red;
+//   }
+//   //1800
+// }
+
+// @media (min-width: 105em) {
+//   body {
+//     background-color: red;
+//   }
+// }
+
+// @media (min-width: 112.5em) {
+//   body {
+//     background-color: red;
+//   }
+//   //1800
+// }
+
+// @media (min-width: 112.5em) and (min-height: 67.5em) {
+//   body {
+//     background-color: red;
+//   }
+//   //1800
+// }
+// @media (max-width: 90em) {
+//   .heading-primary {
+//       margin: 1rem !important;
+//       font-size: 3.2rem !important;
+//   }
+// }

@@ -1,0 +1,67 @@
+.feature {
+  padding: 3rem 2rem;
+  height: 26rem;
+  // width: 40rem;
+  transition: all 0.3s;
+  @include flexColCenter();
+  flex: 0 1 25%;
+  gap: 4rem;
+ 
+  &__heading {
+    & + p {
+      color: $color-grey-dark-3;
+      text-align: center; 
+      font-size: 1.17rem;
+      transition: all 0.8s ease;
+      line-height: 1.8rem;
+      @include respond(big-desktop) {
+        font-size: 1.35rem;
+      }
+      @include respond(tab-768) {
+        font-size: 1.3rem;
+      }
+      @include respond(phone) {
+        width: 50%;
+      }
+    }
+  }
+  &__logo {
+    transition: all 0.8s ease;
+    outline: 1px solid $color-grey-dark-2;
+    outline-offset: 2rem;
+
+    & > * {
+      height: 2.5rem;
+      width: 2.5rem;
+      transition: all 0.8s ease;
+    }
+  }
+
+  &:hover &__logo {
+    transform: rotate(45deg);
+    background-color: $color-primary-dark;
+    outline: 2rem solid $color-primary-dark;
+    outline-offset: 0;
+    & > * {
+      stroke: $color-grey-light-1 !important;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &:hover &__heading {
+    color: $color-primary-dark;
+    // transform: scale(1.1);
+  }
+
+  &:hover &__heading::after {
+    // transform: scaleX(1.1);
+    width: 100%;
+    left: 2%;
+    background-color: transparent;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+  }
+}

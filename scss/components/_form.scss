@@ -1,0 +1,58 @@
+.contact {
+  @include respond(big-desktop) {
+    margin-top: 12rem;
+  }
+  @include flexRowCenter();
+  @include respond(phone-425) {
+    flex-direction: column;
+  }
+  gap: 2rem;
+  &__info {
+    padding: 3rem;
+    @include respond(big-desktop) {
+      padding: 5rem;
+    }
+    box-shadow: 0.5px 0.5px 5px #00000065;
+  }
+}
+.form {
+  box-shadow: 0.5px 0.5px 5px #00000065;
+  width: 30rem;
+  @include flexColCenter();
+  gap: 4rem;
+  padding: 5rem;
+  @include respond(big-desktop) {
+    padding: 3rem;
+    width: 30rem;
+  }
+  .input-con {
+    flex: 0 1 100%;
+    @include flexColCenter();
+    gap: 2rem;
+  }
+  &__input {
+    width: 124%;
+    font-size: 1.1rem;
+    border: none;
+    color: $color-grey-dark-2;
+    border-bottom: 1px solid $color-grey-dark-3;
+    padding: 1rem 2rem;
+    transition: all 0.6s ease;
+    background: transparent;
+    &::placeholder {
+      color: $color-grey-dark-2;
+      font-size: 1.4rem;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid #52b788;
+    }
+    &:focus:invalid {
+      border-bottom: 3px solid $color-primary-light;
+    }
+  }
+  &__label {
+    align-self: flex-start;
+  }
+}

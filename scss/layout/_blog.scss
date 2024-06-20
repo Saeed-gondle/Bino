@@ -1,0 +1,86 @@
+.blog-grid {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include respond(phone) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__item {
+    @include respond(phone-425) {
+      &:nth-child(3) {
+        grid-column: 2;
+      }
+      &:nth-child(4) {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      &:nth-child(5) {
+        grid-column: 2;
+      }
+      &:nth-child(6) {
+        grid-column: 1;
+        grid-row: 3;
+      }
+    }
+
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.grid__text {
+  background-color: $color-primary-light;
+  padding: 3rem;
+  @include respond(phone-425) {
+    padding: 0 2rem;
+  }
+  color: $color-grey-light-2 !important;
+  & > * {
+    text-align: left !important;
+  }
+  p {
+    &::selection {
+      background-color: white;
+      color: red;
+    }
+    font-size: 0.9rem;
+    line-height: 2;
+
+    @include respond(laptop) {
+      font-size: 1rem !important;
+    }
+    @include respond(desktop-1680) {
+      font-size: 1.15rem;
+    } @include respond(phone-425) {
+      font-size: 1rem;
+      margin-top: 5rem; 
+    }
+    @include respond(desktop-1600) {
+      font-size: 1.15rem;
+      margin-top: 5rem;
+    }
+   
+    @include respond(big-desktop) {
+      font-size: 1.3rem;
+      margin-top: 5rem;
+    }
+    @include respond(phone-425) {
+      font-size: 1rem;
+      margin-top: 3rem;
+    }
+  }
+  & > *::after {
+    background-color: $color-grey-light-2;
+    width: 5rem;
+    height: 0.35rem;
+    top: 126%;
+    left: 0%;
+  }
+  .button--sec {
+    border: none;
+    box-shadow: none;
+  }
+}
